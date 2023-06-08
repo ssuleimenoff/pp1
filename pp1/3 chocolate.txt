@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+int choc(int a, int b){
+    if(a*b>1){
+    return (a*b)-1;}
+    else{
+        return 0;
+    }
+}
+
+
+int main() {
+int a,b;
+cin>>a>>b;
+cout<<choc(a,b);
+
+}

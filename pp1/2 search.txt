@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+
+    int n,k;
+    cin>>n>>k;
+    int a[n],b[k];
+    for(int i = 0; i<n; i++){
+       cin>>a[i];
+    }
+    for(int i = 0; i<k; i++){
+        cin>>b[i];
+    }
+
+
+    for(int i = 0; i<k; i++) {
+        int left = 0, right = n - 1, middle;
+        bool found=false;
+        while (left <= right && found!=true) {
+            middle = (left + right) / 2;
+            if (a[middle] == b[i]) {
+                found = true;
+            } else if (a[middle] > b[i]) {
+                right = middle - 1;
+
+            } else {
+                left = middle + 1;
+            }
+        }
+            if(found)cout<<"YES"<<endl;
+            else cout<<"NO"<<endl;
+
+
+    }
+    return 0;
+}

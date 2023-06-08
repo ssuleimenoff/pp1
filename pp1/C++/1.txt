@@ -1,0 +1,24 @@
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <queue>
+#include <stack>
+
+using namespace std;
+int func(int a, int b, int c){
+    for(int i = 0; i < b; i++){
+        cout<<c<<" ";
+        c = c+a;
+    }
+}
+int main() {
+    int a;
+    int b;
+    vector <int> countby(a,b);
+    cin>>a;
+    cin>>b;
+    int c = a;
+    func(a,b,c);
+
+    return 0;
+}

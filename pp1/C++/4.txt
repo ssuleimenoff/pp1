@@ -1,0 +1,55 @@
+#include <iostream>
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <queue>
+#include <stack>
+
+using namespace std;
+
+
+
+
+bool isdigit(string s){
+    bool checked = true;
+
+    for(int i =0; i<s.size(); i++){
+        if(s [i]>='A' && s [i]<='z'){
+            checked = false;
+        }
+        else{}
+    }
+
+    for(int i =1; i<s.size(); i++){
+        if(s [i]=='-'){
+            checked =false;
+        }
+        else{}
+    }
+
+    int dot = 0;
+    for(int i =1; i<s.size(); i++){
+        if(s [i]=='.'){
+            dot++;
+        }
+        else{}
+    }
+    if(dot > 1){
+        checked =false;
+    }
+
+return checked;
+
+
+}
+
+int main() {
+    string s;
+    getline(cin,s);
+   if(isdigit(s)){
+       cout<<"True";
+   }
+   else{
+       cout<<"False";
+   }
+}
